@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Angular app</title>
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="lib/system.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script> setTimeout(() => {System.import('app/boot');},0) </script>
+</head>
+
+<body ng-controller="indexCtrl" ng-cloak>
+    <h1>{{title}}</h1>
+</body>
+</html>

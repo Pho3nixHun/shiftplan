@@ -8,7 +8,7 @@ module.exports = exports = ((environment) => {
     let defaults = {
         host: '127.0.0.1',
         port: 3000,
-        middlewareDirectory: './middlewares',
+        middlewareDirectory: './server/middlewares',
         log: {
             directory: './log',
             accessLevel: 'info',

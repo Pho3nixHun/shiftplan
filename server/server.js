@@ -24,7 +24,7 @@ const death = require('death')({uncaughtException: true})
 
 const app = express();
 app.use(winstonExpressMiddleware);
-const middlewareDirectoryPath = path.join(__dirname, config.middlewareDirectory);
+const middlewareDirectoryPath = path.join(process.cwd(), config.middlewareDirectory);
 const middlewares = fs.readdirSync(middlewareDirectoryPath).filter((file) => path.extname(file) == '.js');
 middlewares.forEach((mw) => {
    let middlewarePath = path.join(middlewareDirectoryPath, mw);
