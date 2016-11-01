@@ -1,0 +1,33 @@
+{
+  "name": "jane-kickstart",
+  "version": "1.0.0",
+  "description": "Jspm, Angular, Node and Express bundle.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pho3nixHun/JANE-kickstart.git"
+  },
+  "keywords": [
+    "angular",
+    "node",
+    "express",
+    "jspm",
+    "angular-material"
+  ],
+  "author": "László Simon <pho3nixhun@GitHub>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pho3nixHun/JANE-kickstart/issues"
+  },
+  "homepage": "https://github.com/Pho3nixHun/JANE-kickstart#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "death": "^1.0.0",
+    "express": "^4.14.0",
+    "winston-express": "github:pho3nixhun/winston-express",
+    "xtend": "^4.0.1"
+  }
+}
