@@ -1,9 +1,9 @@
 # JANE-kickstart
-### **J**spm (with systemjs) + **A**ngular + **N**ode + **E**xpress
+**J**spm (with systemjs) + **A**ngular + **N**ode + **E**xpress
 
 Included libraries:
 
-    Server
+### Server
     
 + Composed on Node 7.0.0
 + Expressjs
@@ -12,7 +12,7 @@ Included libraries:
 + body-parser
 + (TODO) lets-encrypt-express
     
-    Client
+### Client
 
 + Angular
 + Angular-animate
