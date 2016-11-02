@@ -7,7 +7,10 @@ module.exports = exports = ((environment) => {
     let environmentBasedConfig = (environment || 'development').toLowerCase() == 'production' ? prodConfig : devConfig;
     let defaults = {
         host: '127.0.0.1',
-        port: 3000,
+        port: 8443,
+        httpPort: 8080,
+        useLetsEncrypt: true,
+        domains: [ 'example.com' ],
         middlewareDirectory: './server/middlewares',
         log: {
             directory: './log',

@@ -4,7 +4,8 @@
   "description": "Jspm, Angular, Node and Express bundle.",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "build-client": "node builder.js"
   },
   "repository": {
     "type": "git",
@@ -25,13 +26,18 @@
   "homepage": "https://github.com/Pho3nixHun/JANE-kickstart#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
     "death": "^1.0.0",
     "express": "^4.14.0",
+    "letsencrypt-express": "^2.0.5",
     "winston-express": "github:pho3nixhun/winston-express",
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "jspm": "^0.16.47"
+    "babel-core": "^6.18.2",
+    "cli-spinner": "^0.2.5",
+    "jspm": "^0.16.47",
+    "systemjs-builder": "^0.15.33"
   },
   "jspm": {
     "directories": {
