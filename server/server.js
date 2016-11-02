@@ -3,7 +3,6 @@
 const config = require("./config/config");
 const fs = require("fs");
 const path = require("path");
-const http = require("http");
 const express = require('express');
 const compression = require('compression');
 const letsencryptExpress = require('letsencrypt-express');
@@ -25,7 +24,7 @@ const winstonExpressMiddleware = winstonExpress({
     format: 'combined'
 });
 const log = winstonExpressMiddleware.logger;
-const death = require('death')({uncaughtException: true}) 
+const death = require('death')({uncaughtException: true});
 
 const app = express();
 app.use(winstonExpressMiddleware);
@@ -54,10 +53,10 @@ server.on('listening', () => {
   let host = server.address().address;
   let port = server.address().port;
   log.info('App listening at https://%s:%s', host, port);
-})
+});
 
 death((signal, err) => {
     if (err) log.error(err);
-    else if(signal) log.warn(`Received ${signal} signal.`)
+    else if(signal) log.warn(`Received ${signal} signal.`);
     process.exit(err ? -1 : 0);
-})
+});

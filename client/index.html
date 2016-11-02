@@ -23,8 +23,19 @@
     </style>
     <script src="lib/system.js"></script>
     <script src="systemjs.config.js"></script>
-    <script src="app/bundle.js"></script>
-    <script> setTimeout(() => {System.import('app/boot');},0) </script>
+    <script> 
+        "use strict";
+        setTimeout(() => {
+            var importBoot = function() { System.import('app/boot') };
+            System.import('app/bundle').then(function() {
+                console.log("Using bundle");
+                importBoot();
+            }).catch(function(){
+                console.log("Bundle not available. Using default method.");
+                importBoot();
+            });
+        },0);
+    </script>
 </head>
 
 <body ng-controller="indexCtrl" ng-cloak>
