@@ -10,7 +10,8 @@ Included libraries:
 + Death
 + Winston-express
 + body-parser
-+ (TODO) lets-encrypt-express
++ lets-encrypt-express
++ compression
     
 ### Client
 
@@ -25,3 +26,5 @@ Included libraries:
 + Api-check
 + Animate.css
 + Material-icons font set
+
+Systemjs-builder also implemented. See ```builder.js```.
