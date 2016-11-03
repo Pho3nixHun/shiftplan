@@ -20,9 +20,11 @@ System.config({
     "angular-formly": "npm:angular-formly@8.4.0",
     "angular-formly-material": "npm:angular-formly-material@0.14.3",
     "angular-material": "github:angular/bower-material@1.1.1",
+    "angular-material-calendar": "npm:angular-material-calendar@0.2.14",
     "angular-messages": "github:angular/bower-angular-messages@1.5.8",
     "angular-resource": "github:angular/bower-angular-resource@1.5.8",
     "angular-route": "github:angular/bower-angular-route@1.5.8",
+    "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.8",
     "api-check": "npm:api-check@7.5.5",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
@@ -30,6 +32,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.32",
     "jquery": "npm:jquery@3.1.1",
     "json": "github:systemjs/plugin-json@0.2.1",
+    "text": "github:systemjs/plugin-text@0.0.9",
     "github:angular/bower-angular-animate@1.5.8": {
       "angular": "github:angular/bower-angular@1.5.8"
     },
@@ -43,6 +46,9 @@ System.config({
       "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:angular/bower-angular-route@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
+    },
+    "github:angular/bower-angular-sanitize@1.5.8": {
       "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:angular/bower-material@1.1.1": {
@@ -70,17 +76,30 @@ System.config({
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "npm:angular-formly-material@0.14.3": {
-      "angular": "npm:angular@1.5.8",
-      "angular-animate": "npm:angular-animate@1.5.8",
-      "angular-aria": "npm:angular-aria@1.5.8",
+      "angular": "npm:angular@1.4.14",
+      "angular-animate": "npm:angular-animate@1.4.14",
+      "angular-aria": "npm:angular-aria@1.4.14",
       "angular-formly": "npm:angular-formly@8.4.0",
       "angular-material": "npm:angular-material@1.1.1",
       "angular-messages": "npm:angular-messages@1.5.8",
       "api-check": "npm:api-check@7.5.5"
     },
     "npm:angular-formly@8.4.0": {
-      "angular": "npm:angular@1.5.8",
+      "angular": "npm:angular@1.4.14",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:angular-material-calendar@0.2.14": {
+      "angular": "npm:angular@1.4.14",
+      "angular-animate": "npm:angular-animate@1.4.14",
+      "angular-aria": "npm:angular-aria@1.4.14",
+      "angular-material": "npm:angular-material@0.11.4",
+      "angular-sanitize": "npm:angular-sanitize@1.4.14"
+    },
+    "npm:angular-material@0.11.4": {
+      "angular": "github:angular/bower-angular@1.5.8",
+      "angular-animate": "github:angular/bower-angular-animate@1.5.8",
+      "angular-aria": "github:angular/bower-angular-aria@1.5.8",
+      "css": "github:systemjs/plugin-css@0.1.32"
     },
     "npm:angular-material@1.1.1": {
       "angular": "github:angular/bower-angular@1.5.8",
@@ -88,6 +107,9 @@ System.config({
       "angular-aria": "github:angular/bower-angular-aria@1.5.8",
       "angular-messages": "github:angular/bower-angular-messages@1.5.8",
       "css": "github:systemjs/plugin-css@0.1.32"
+    },
+    "npm:angular@1.4.14": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

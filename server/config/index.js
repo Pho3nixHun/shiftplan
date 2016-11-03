@@ -11,7 +11,6 @@ module.exports = exports = ((environment) => {
         httpPort: 8080,
         useLetsEncrypt: true,
         domains: [ 'example.com' ],
-        middlewareDirectory: './server/middlewares',
         log: {
             directory: './log',
             accessLevel: 'info',

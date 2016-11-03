@@ -1,0 +1,20 @@
+<section>
+    <calendar-md flex layout layout-fill
+        calendar-direction="direction"
+        on-prev-month="prevMonth"
+        on-next-month="nextMonth"
+        on-day-click="dayClick"
+        title-format="titleFormat"
+        ng-model='selectedDate'
+        week-starts-on="weekStartsOn"
+        data-start-month="{{startMonth}}"
+        data-start-year="{{startYear}}"
+        tooltips="tooltips"
+        day-format="dayFormat"
+        day-label-format="'EEEE'"
+        day-label-tooltip-format="'EEEE'"
+        day-tooltip-format="'fullDate'"
+        day-content="setDayContent"
+        disable-future-selection="disableFutureSelection"
+    ></calendar-md>
+</section>

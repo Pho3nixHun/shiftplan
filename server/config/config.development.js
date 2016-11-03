@@ -1,8 +1,8 @@
 "use strict";
-module.exports = exports = ( () => {
+module.exports = exports = (() => {
     return {
-        host: process.env.IP ,
-        port: process.env.PORT,
+        host: process.env.IP || '127.0.0.1',
+        port: process.env.PORT || 3000,
         domains: [ process.env['C9_HOSTNAME'] ],
         useLetsEncrypt: false,
         log: {
