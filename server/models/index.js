@@ -8,7 +8,7 @@ try { fs.accessSync(dataDir, fs.constants.F_OK ) } catch(ex) { fs.mkdirSync(data
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize('database', null, null, {
-  //timezone: '+00:00', 
+  //timezone: '+02:00',
   dialect: 'sqlite',
   storage: path.join(dataDir, 'db.sqlite')
 });

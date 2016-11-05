@@ -1,5 +1,6 @@
 'use strict';
 import template from "app/directives/month.html!text";
+import dialogTemplate from "app/templates/shift.create.dialog.html!text";
 import "angular-material-calendar";
 
 (function (angular, template) {
@@ -20,8 +21,8 @@ import "angular-material-calendar";
                 
             },
             controller: [
-                '$scope',
-                function ($scope) {
+                '$scope', '$mdDialog',
+                function ($scope, $mdDialog) {
                     $scope.selectedDate = null;
                     $scope.startMonth = null;
                     $scope.startYear = null;
@@ -31,6 +32,38 @@ import "angular-material-calendar";
                     $scope.disableFutureSelection = false;
                     $scope.dayClick = function (date) {
                         console.log(`You clicked a day`, date);
+                        $mdDialog.show({
+                            controller: ['$scope', '$mdDialog', function($scope, $mdDialog){
+                                $scope.answer = {};
+                                $scope.types = [
+                                    { start: 6, text: 'Day shift', length: 12},
+                                    { start: 8, text: 'Normal shift', length: 8.5},
+                                    { start: 18, text: 'Night shift', length: 12}
+                                ]
+                                $scope.hide = function() {
+                                  $mdDialog.hide();
+                                };
+                            
+                                $scope.cancel = function() {
+                                  $mdDialog.cancel();
+                                };
+                            
+                                $scope.answer = function(answer) {
+                                  $mdDialog.hide(answer);
+                                };
+                          }],
+                          template: dialogTemplate,
+                          parent: angular.element(document.body),
+                          clickOutsideToClose:true,
+                          fullscreen: true
+                        }).then(
+                            (answer) => {
+                                console.log(answer);
+                                //Answered
+                            }, 
+                            () => {
+                                //Canceled
+                            });
                     }
                     $scope.prevMonth = function (date) {
                         console.log(`You clicked (prev) month`, date);

@@ -2,8 +2,8 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Shift = sequelize.define("Shift", {
-    startDate: DataTypes.DATE,
-    length: DataTypes.INTEGER
+    startDate: DataTypes.BIGINT,
+    length: DataTypes.BIGINT
   }, {
     classMethods: {
       associate: function(models) {

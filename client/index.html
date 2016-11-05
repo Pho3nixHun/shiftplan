@@ -21,12 +21,14 @@
             padding: 0;
         }
     </style>
-    <script src="lib/system.js"></script>
-    <script src="systemjs.config.js"></script>
-    <script> 
+    <script type="text/javascript" src="resources/Timer.js"></script>
+    <script type="text/javascript" src="lib/system.js"></script>
+    <script type="text/javascript" src="systemjs.config.js"></script>
+    <script>
         "use strict";
+        var timer = new Timer().start();
         setTimeout(() => {
-            var importBoot = function() { System.import('app/boot') };
+            var importBoot = function() { System.import('app/boot').then(() => console.log(`Site loaded in ${(timer.interval/1000).toFixed(2)} seconds` )); };
             System.import('app/bundle').then(function() {
                 console.log("Using bundle");
                 importBoot();
